@@ -1,4 +1,4 @@
-#Projekt zaliczeniowy przedmiotu Programowanie aplikacji back-endowych
+# Projekt zaliczeniowy przedmiotu Programowanie aplikacji back-endowych
 
 REST API (ASP.NET Core Web Api (5 encji), JWT, InMemory EF, Swagger, 47 testów jednostkowych)
 gRPC
