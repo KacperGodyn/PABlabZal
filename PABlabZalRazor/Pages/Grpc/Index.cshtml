@@ -1,0 +1,13 @@
+﻿@page
+@model PABlabZalRazor.Pages.Grpc.IndexModel
+@{
+    ViewData["Title"] = "gRPC Client";
+}
+
+<h2>gRPC Client</h2>
+
+<p>@Model.Message</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-primary">Call gRPC Service</button>
+</form>

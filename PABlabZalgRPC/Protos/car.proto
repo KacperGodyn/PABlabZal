@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "PABlabZalApi.Grpc";
+
+service CarService {
+    rpc GetCar(GetCarRequest) returns (CarResponse);
+    rpc GetCars(Empty) returns (CarsResponse);
+    rpc AddCar(AddCarRequest) returns (CarResponse);
+    rpc UpdateCar(UpdateCarRequest) returns (CarResponse);
+    rpc DeleteCar(DeleteCarRequest) returns (Empty);
+}
+
+message Car {
+    int32 id = 1;
+    string madeBy = 2;
+    string model = 3;
+    string licensePlate = 4;
+    string pricePerDay = 5;
+}
+
+message GetCarRequest {
+    int32 id = 1;
+}
+
+message AddCarRequest {
+    Car car = 1;
+}
+
+message UpdateCarRequest {
+    Car car = 1;
+}
+
+message DeleteCarRequest {
+    int32 id = 1;
+}
+
+message CarResponse {
+    Car car = 1;
+}
+
+message CarsResponse {
+    repeated Car cars = 1;
+}
+
+message Empty {}

@@ -1,0 +1,6 @@
+@PABlabZal_HostAddress = http://localhost:5045
+
+GET {{PABlabZal_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

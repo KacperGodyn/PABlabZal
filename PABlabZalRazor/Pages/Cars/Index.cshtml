@@ -1,0 +1,31 @@
+﻿@page
+@model AdminPanel.Pages.Cars.IndexModel
+@{
+    ViewData["Title"] = "Cars";
+}
+
+<h2>Cars</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>LicensePlate</th>
+            <th>PricePerDay</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model.Cars)
+        {
+            <tr>
+                <td>@car.Id</td>
+                <td>@car.MadeBy</td>
+                <td>@car.Model</td>
+                <td>@car.LicensePlate</td>
+                <td>@car.PricePerDay</td>
+            </tr>
+        }
+    </tbody>
+</table>

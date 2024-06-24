@@ -1,0 +1,126 @@
+﻿@page
+@model AdminPanel.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Admin Panel";
+}
+
+<h2>Admin Panel</h2>
+
+<h3>Cars</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>LicensePlate</th>
+            <th>PricePerDay</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model.Cars)
+        {
+            <tr>
+                <td>@car.Id</td>
+                <td>@car.MadeBy</td>
+                <td>@car.Model</td>
+                <td>@car.LicensePlate</td>
+                <td>@car.PricePerDay</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Clients</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>PhoneNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model.Clients)
+        {
+            <tr>
+                <td>@client.Id</td>
+                <td>@client.Name</td>
+                <td>@client.Surname</td>
+                <td>@client.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Employees</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model.Employees)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.Position</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Payments</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>PaymentDate</th>
+            <th>RentalId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var payment in Model.Payments)
+        {
+            <tr>
+                <td>@payment.Id</td>
+                <td>@payment.Amount</td>
+                <td>@payment.PaymentDate</td>
+                <td>@payment.RentalId</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Rentals</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th>ClientId</th>
+            <th>CarId</th>
+            <th>EmployeeId</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rental in Model.Rentals)
+        {
+            <tr>
+                <td>@rental.Id</td>
+                <td>@rental.StartDate</td>
+                <td>@rental.EndDate</td>
+                <td>@rental.ClientId</td>
+                <td>@rental.CarId</td>
+                <td>@rental.EmployeeId</td>
+            </tr>
+        }
+    </tbody>
+</table>
